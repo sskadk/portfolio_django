@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row my-5">
+  <div class="col-12 d-flex justify-content-center align-items-center">
+    <div class="circular-image-container">
+      <img class="circular-image" src="{% static 'img/sskadk.jpg' %}">
+    </div>
+  </div>
+    <div class="col-12 text-center mt-3">
+      <h4 class="title"> Hi! My name is </h4>
+        <div class="name">
+          <h1> Swastik Adhikari </h1>
+          <h2> I am Full-Stack Web Devloper </h2>
+        <div>
+    </div>
+    <div class="col-12 text-center mt-3">
+      <div class="col-12 d-flex justify-content-center align-items-center">
+        <a href="https://www.linkedin.com/in/swastik-adhikary-83601499/" target="_blank">
+          <img src="{% static 'img/linkedin.webp' %}" alt="img/linkedin.webp" height="50" width="50" class="social_links">
+        </a>
+
+        <a href="https://www.instagram.com/swastik_adk/" target="_blank">
+          <img src="{% static 'img/insta.webp' %}" alt="img/insta.webp" height="50" width="50" class="social_links">
+        </a>
+
+        <a href="https://github.com/sskadk" target="_blank">
+          <img src="{% static 'img/git.webp' %}" alt="img/git.webp" height="50" width="50" class="social_links">
+        </a>
+    </div>
+    </div>
+</div>
+{% endblock content %}
