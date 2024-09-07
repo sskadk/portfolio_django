@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.contrib.staticfiles.storage import staticfiles_storage
 
 def home(request):
@@ -47,12 +47,12 @@ def certifications(request):
     return render(request,'certification.html', {'certifications': certifications})
 
 def resume(request):
-    resume_path="cv/cv.pdf"
-    resume_path=staticfiles_storage.path(resume_path)
+    resume_path = "cv/cv.pdf"
     if staticfiles_storage.exists(resume_path):
-        with open(resume_path,"rb") as resume_file:
-            response=HttpResponse(resume_file.read(),content_type="application/pdf")
-            response['Content-Disposition']='attachment';filename="resume.pdf"
+        with staticfiles_storage.open(resume_path, "rb") as resume_file:
+            response = HttpResponse(resume_file.read(), content_type="application/pdf")
+            response['Content-Disposition'] = 'attachment; filename="cv.pdf"'
             return response
     else:
-        return HttpResponse("CV not Found", status=404)
+        # Handle the case where the file does not exist
+        return HttpResponseNotFound("File not found.")
