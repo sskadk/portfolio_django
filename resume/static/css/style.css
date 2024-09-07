@@ -3,7 +3,7 @@ body{
 }
 .navbar-nav .nav-link:hover{
     font-weight:bold;
-    color:rgb(10, 92, 199);
+    color:rgb(134, 180, 240);
 }
 .navbar-nav .nav-link{
     font-size:15px;
