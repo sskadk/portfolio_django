@@ -47,3 +47,11 @@ body{
     justify-content: center;
     align-items:center;
 }
+.about_image{
+    width:200px;
+    height:auto;
+    display:block;
+}
+.text-center{
+    color:rgb(10, 92, 199);
+}
