@@ -55,3 +55,22 @@ body{
 .text-center{
     color:rgb(10, 92, 199);
 }
+.jumbtron{
+    background-color: #002440;
+    padding: 20px;
+    border-radius: 10px;
+}
+.display4{
+    color:aqua;
+    font-size: 24px;
+}
+.lead{
+    font-size: 18px;
+    color:aquamarine
+}
+.form-container{
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e1daf1;
+}
